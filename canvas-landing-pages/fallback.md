@@ -10,5 +10,5 @@ This Lab introduces students to the importance of testing software under extreme
 
 ## Content
 
-- [Setup](./setup/README.md)
-- [Exercise](./exercise/README.md)
+- [Setup](../setup/README.md)
+- [Exercise](../exercise/README.md)
