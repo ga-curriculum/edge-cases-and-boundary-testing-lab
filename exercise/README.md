@@ -11,7 +11,7 @@
 
 - Submitting an `empty string` to a text field.
 - Requesting page `-1` from an API.
-- Uploading a file that is exactly 1`00MB` (the system limit).
+- Uploading a file that is exactly `100MB` (the system limit).
 - A username that is `255` characters long.
 
 > These are cases where logic can break, systems crash, or strange bugs surface. Real users (and malicious actors) can encounter or exploit these.
@@ -87,50 +87,50 @@ Use the TODO comments in your test file as a guide. Your task is to implement ea
 
 1. **Duplicate email registration**
 
-- Try registering with `"existing@example.com"` (already in `users_db`)
-- Expect 400 with message "Email already registered"
+   - Try registering with `"existing@example.com"` (already in `users_db`)
+   - Expect 400 with message "Email already registered"
 
 2. **Short or empty name**
 
-- Try a payload with `name=""` or `"A"` (too short for a real name)
-- Expect a 422 validation error or a 400-level failure depending on implementation
+   - Try a payload with `name=""` or `"A"` (too short for a real name)
+   - Expect a 422 validation error or a 400-level failure depending on implementation
 
 3. **Very long name**
 
-- Try a name string of 100+ characters
-- Expect success or appropriate rejection depending on how you want to limit it
+   - Try a name string of 100+ characters
+   - Expect success or appropriate rejection depending on how you want to limit it
 
 4. **Invalid email format**
 
-- Try `"not-an-email"` as the email field
-- Expect a 422 validation error from Pydantic
+   - Try `"not-an-email"` as the email field
+   - Expect a 422 validation error from Pydantic
 
 5. **Very short password**
 
-- Try a password like `"123"` or `"pw"`
-- Expect success or failure depending on your validation needs (note: current implementation does not validate password length, so this may pass)
+   - Try a password like `"123"` or `"pw"`
+   - Expect success or failure depending on your validation needs (note: current implementation does not validate password length, so this may pass)
 
 ### Login Route Tests
 
 6. **Wrong password**
 
-- Use `"existing@example.com"` but the wrong password
-- Expect 401 with "Invalid credentials"
+   - Use `"existing@example.com"` but the wrong password
+   - Expect 401 with "Invalid credentials"
 
 7. **Non-existent user**
 
-- Login with an unregistered email like `"ghost@example.com"`
-- Expect 401
+   - Login with an unregistered email like `"ghost@example.com"`
+   - Expect 401
 
 8. **Empty email**
 
-- Try `email=""` with a valid password
-- Expect a 422 validation error
+   - Try `email=""` with a valid password
+   - Expect a 422 validation error
 
 9. **Invalid email format**
 
-- Use `"not-an-email"` as the email
-- Expect a 422 validation error
+   - Use `"not-an-email"` as the email
+   - Expect a 422 validation error
 
 ### 💡 Hints
 
