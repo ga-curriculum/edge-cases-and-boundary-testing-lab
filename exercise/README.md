@@ -9,10 +9,10 @@
 
 **Examples:**
 
-- Submitting an empty string to a text field.
+- Submitting an `empty string` to a text field.
 - Requesting page `-1` from an API.
-- Uploading a file that is exactly 100MB (the system limit).
-- A username that is 255 characters long.
+- Uploading a file that is exactly 1`00MB` (the system limit).
+- A username that is `255` characters long.
 
 > These are cases where logic can break, systems crash, or strange bugs surface. Real users (and malicious actors) can encounter or exploit these.
 
