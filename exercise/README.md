@@ -122,12 +122,12 @@ Use the TODO comments in your test file as a guide. Your task is to implement ea
 - Login with an unregistered email like `"ghost@example.com"`
 - Expect 401
 
-9. **Empty email**
+8. **Empty email**
 
 - Try `email=""` with a valid password
 - Expect a 422 validation error
 
-10. **Invalid email format**
+9. **Invalid email format**
 
 - Use `"not-an-email"` as the email
 - Expect a 422 validation error
@@ -146,6 +146,6 @@ Use the TODO comments in your test file as a guide. Your task is to implement ea
 
 By the end of this lab, your test file should contain:
 
-- At least 10 total test functions covering edge and boundary inputs
+- At least 9 total test functions covering edge and boundary inputs
 - Clear assertions for status codes and expected JSON messages
 - All tests should pass or fail meaningfully based on your FastAPI logic
